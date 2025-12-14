@@ -185,6 +185,27 @@ def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> 
     flags["max_missing_share"] = max_missing_share
     flags["too_many_missing"] = max_missing_share > 0.5
 
+    # --- NEW 1: константные колонки (все значения одинаковые, не все NaN) ---
+    constant_cols: List[str] = []
+    for c in summary.columns:
+        if c.unique == 1 and c.non_null > 0:
+            constant_cols.append(c.name)
+
+    flags["has_constant_columns"] = len(constant_cols) > 0
+    flags["constant_columns"] = constant_cols
+
+    # --- NEW 3: подозрительные дубликаты в ID-колонках ---
+    # Эвристика без df: если колонка выглядит как id и unique < non_null -> есть дубликаты
+    id_like_cols_with_dups: List[str] = []
+    for c in summary.columns:
+        n = c.name.lower()
+        looks_like_id = (n == "id") or n.endswith("_id") or n.startswith("id_") or ("user_id" in n) or ("uuid" in n)
+        if looks_like_id and c.non_null > 0 and c.unique < c.non_null:
+            id_like_cols_with_dups.append(c.name)
+
+    flags["has_suspicious_id_duplicates"] = len(id_like_cols_with_dups) > 0
+    flags["id_columns_with_duplicates"] = id_like_cols_with_dups
+
     # Простейший «скор» качества
     score = 1.0
     score -= max_missing_share  # чем больше пропусков, тем хуже
@@ -192,6 +213,10 @@ def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> 
         score -= 0.2
     if summary.n_cols > 100:
         score -= 0.1
+    if flags["has_constant_columns"]:
+        score -= 0.1
+    if flags["has_suspicious_id_duplicates"]:
+        score -= 0.25
 
     score = max(0.0, min(1.0, score))
     flags["quality_score"] = score
