@@ -59,3 +59,25 @@ def test_correlation_and_top_categories():
     city_table = top_cats["city"]
     assert "value" in city_table.columns
     assert len(city_table) <= 2
+
+
+def test_quality_flags_constant_and_id_duplicates():
+    df = pd.DataFrame(
+        {
+            "user_id": [1, 1, 2, 3],          # дубликаты id
+            "country": ["RU", "RU", "RU", "RU"],  # константная колонка
+            "value": [10, 20, 30, 40],
+        }
+    )
+
+    summary = summarize_dataset(df)
+    missing_df = missing_table(df)
+    flags = compute_quality_flags(summary, missing_df)
+
+    # 1) константная колонка
+    assert flags["has_constant_columns"] is True
+    assert "country" in flags["constant_columns"]
+
+    # 2) дубликаты в ID-похожей колонке
+    assert flags["has_suspicious_id_duplicates"] is True
+    assert "user_id" in flags["id_columns_with_duplicates"]
