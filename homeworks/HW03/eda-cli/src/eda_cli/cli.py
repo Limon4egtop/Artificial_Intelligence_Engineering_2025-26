@@ -132,6 +132,15 @@ def report(
         f.write(f"- Слишком мало строк: **{quality_flags['too_few_rows']}**\n")
         f.write(f"- Слишком много колонок: **{quality_flags['too_many_columns']}**\n")
         f.write(f"- Слишком много пропусков: **{quality_flags['too_many_missing']}**\n\n")
+        f.write(f"- Есть константные колонки: **{quality_flags.get('has_constant_columns', False)}**\n")
+        const_cols = quality_flags.get("constant_columns", [])
+        if const_cols:
+            f.write(f"  - constant_columns: {', '.join(f'`{c}`' for c in const_cols)}\n")
+
+        f.write(f"- Есть дубликаты в ID-колонках: **{quality_flags.get('has_suspicious_id_duplicates', False)}**\n")
+        id_dups = quality_flags.get("id_columns_with_duplicates", [])
+        if id_dups:
+            f.write(f"  - id_columns_with_duplicates: {', '.join(f'`{c}`' for c in id_dups)}\n")
 
         f.write("## Колонки\n\n")
         f.write("См. файл `summary.csv`.\n\n")
