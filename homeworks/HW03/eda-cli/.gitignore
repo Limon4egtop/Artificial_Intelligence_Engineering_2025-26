@@ -8,3 +8,23 @@ wheels/
 
 # Virtual environments
 .venv
+/reports_example/correlation.csv
+/reports_example/correlation_heatmap.png
+/reports_example/hist_1_user_id.png
+/reports_example/hist_2_sessions_last_30d.png
+/reports_example/hist_3_avg_session_duration_min.png
+/reports_example/hist_4_pages_per_session.png
+/reports_example/hist_5_purchases_last_30d.png
+/reports_example/hist_6_revenue_last_30d.png
+/reports_example/hist_7_churned.png
+/reports_example/hist_8_signup_year.png
+/reports_example/hist_9_n_support_tickets.png
+/reports_example/missing.csv
+/reports_example/missing_matrix.png
+/reports_example/report.md
+/reports_example/summary.csv
+/reports_example/top_categories/top_values_channel.csv
+/reports_example/top_categories/top_values_city.csv
+/reports_example/top_categories/top_values_country.csv
+/reports_example/top_categories/top_values_device.csv
+/reports_example/top_categories/top_values_plan.csv
