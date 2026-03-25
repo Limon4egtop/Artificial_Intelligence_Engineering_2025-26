@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,simple-cnn-base,Adam,0.001,5,0.465,,,,,Simple CNN without augmentations
+C2,classification,STL10,42,simple-cnn-aug,Adam,0.001,5,0.491,,,,,Same CNN with train augmentations
+C3,classification,STL10,42,resnet18-head-only,Adam,0.001,4,0.932,,,,,"Pretrained ResNet18, only fc trainable"
+C4,classification,STL10,42,resnet18-finetune,Adam,0.0001,4,0.944,0.947875,,,,"Pretrained ResNet18, layer4 + fc trainable"
+V1,detection,Pascal VOC 2007 test,42,fasterrcnn_resnet50_fpn pretrained,,,0,,,0.30196078431372547,0.8700564971751412,0.8168231375623506,"score_threshold=0.3, eval_images=60"
+V2,detection,Pascal VOC 2007 test,42,fasterrcnn_resnet50_fpn pretrained,,,0,,,0.5564516129032258,0.7796610169491526,0.8277495842270476,"score_threshold=0.7, eval_images=60"

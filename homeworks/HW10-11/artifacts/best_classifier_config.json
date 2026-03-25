@@ -1,0 +1,18 @@
+{
+  "dataset": "STL10",
+  "best_experiment_id": "C4",
+  "architecture": "resnet18-finetune",
+  "seed": 42,
+  "epochs_trained": 4,
+  "best_val_accuracy": 0.944,
+  "test_accuracy": 0.947875,
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "train_val_split": {
+    "train_size": 4000,
+    "val_size": 1000,
+    "val_ratio": 0.2
+  },
+  "transforms": "ResNet18_Weights.DEFAULT.transforms()"
+}
