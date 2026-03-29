@@ -1,0 +1,5 @@
+query,before_retrieved_sources,after_retrieved_sources,changed
+When is the GPU lab open?,doc_01_course_structure; doc_01_course_structure; doc_01_course_structure,upd_01_gpu_lab_policy; doc_01_course_structure; doc_01_course_structure,1
+What is the late submission window?,doc_02_submission_rules; doc_01_course_structure; doc_01_course_structure,upd_02_late_submission_policy; upd_02_late_submission_policy; doc_02_submission_rules,1
+Which files are required specifically for HW14?,doc_11_reports_and_artifacts; doc_02_submission_rules; doc_11_reports_and_artifacts,upd_03_hw14_specific_note; doc_02_submission_rules; doc_11_reports_and_artifacts,1
+How do students reserve a GPU lab slot?,doc_01_course_structure; doc_01_course_structure; doc_01_course_structure,upd_01_gpu_lab_policy; upd_01_gpu_lab_policy; doc_01_course_structure,1

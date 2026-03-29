@@ -1,0 +1,10 @@
+source,title,text
+upd_01_gpu_lab_policy,Updated GPU Lab Policy,"The GPU lab is open on Tuesdays and Thursdays from 18:00 to 20:00 for supervised project work. 
+Students should book a slot through the course chat one day in advance. 
+This policy was added after the original handbook and should appear in the updated knowledge base."
+upd_02_late_submission_policy,Late Submission Policy,"Late submissions are accepted up to 48 hours after the deadline with a documented reason and a visible commit history. 
+After that window, the homework is reviewed only at the instructor's discretion. 
+This update clarifies the earlier submission rules and changes retrieval results for deadline-related questions."
+upd_03_hw14_specific_note,HW14 Specific Note,"For HW14 the required artifacts are retrieval_eval.csv, rag_examples.csv, and retrieval_before_after_update.csv. 
+The notebook should demonstrate chunking, vectorization, a FAISS index, retrieval evaluation, knowledge base update, and a mini-RAG answer with sources. 
+This note was added later to make the retrieval homework requirements more explicit."

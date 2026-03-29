@@ -1,0 +1,18 @@
+{
+  "main_top_k": 3,
+  "hit@k": 1.0,
+  "recall@k": 1.0,
+  "mrr@k": 0.8333333333333333,
+  "parameter_experiment": {
+    "top_k_2": {
+      "hit@k": 0.9,
+      "recall@k": 0.9,
+      "mrr@k": 0.8888888888888888
+    },
+    "top_k_3": {
+      "hit@k": 1.0,
+      "recall@k": 1.0,
+      "mrr@k": 0.8333333333333333
+    }
+  }
+}

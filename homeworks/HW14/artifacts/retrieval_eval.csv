@@ -1,0 +1,11 @@
+query,expected_source,retrieved_sources,hit_at_k,recall_at_k,rank_of_first_relevant
+What files must be included in a homework folder?,doc_02_submission_rules,doc_01_course_structure; doc_02_submission_rules; doc_01_course_structure,1,1.0,2
+How should validation and test be used during experiments?,doc_03_validation_policy,doc_03_validation_policy; doc_03_validation_policy; doc_03_validation_policy,1,1.0,1
+Why is chunking important for retrieval quality?,doc_05_chunking_guidelines,doc_08_knowledge_base_updates; doc_04_retrieval_basics; doc_05_chunking_guidelines,1,1.0,3
+What does hit@k measure?,doc_07_retrieval_metrics,doc_12_practical_limits; doc_07_retrieval_metrics; doc_07_retrieval_metrics,1,1.0,2
+Why should vectors be normalized for cosine similarity in FAISS?,doc_06_faiss_notes,doc_06_faiss_notes; doc_06_faiss_notes; doc_06_faiss_notes,1,1.0,1
+What is mini-RAG in this course context?,doc_09_mini_rag,doc_09_mini_rag; doc_01_course_structure; doc_09_mini_rag,1,1.0,1
+Why can a report get comments even if the notebook works?,doc_11_reports_and_artifacts,doc_11_reports_and_artifacts; doc_01_course_structure; doc_02_submission_rules,1,1.0,1
+Why is a simple pipeline acceptable for an educational retrieval project?,doc_12_practical_limits,doc_12_practical_limits; doc_09_mini_rag; doc_12_practical_limits,1,1.0,1
+How do you compare retrieval before and after updating the knowledge base?,doc_08_knowledge_base_updates,doc_08_knowledge_base_updates; doc_08_knowledge_base_updates; doc_11_reports_and_artifacts,1,1.0,1
+What should error analysis explain in a retrieval homework?,doc_10_error_analysis,doc_10_error_analysis; doc_10_error_analysis; doc_01_course_structure,1,1.0,1
