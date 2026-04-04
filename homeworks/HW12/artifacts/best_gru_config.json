@@ -1,20 +1,19 @@
 {
-    "window_size": 7,
-    "hidden_size": 48,
+    "model_type": "GRU",
+    "window_size": 24,
+    "hidden_size": 64,
     "num_layers": 2,
-    "batch_size": 64,
     "learning_rate": 0.001,
-    "epochs": 30,
+    "batch_size": 64,
+    "n_epochs": 50,
+    "best_epoch": 50,
+    "best_val_mae": 5.134904861450195,
+    "best_val_rmse": 6.674770897066079,
+    "best_val_mape": 0.03474324941635132,
+    "test_mae": 5.961069583892822,
+    "test_rmse": 7.535222568882598,
+    "test_mape": 0.03891066089272499,
+    "scaler": "StandardScaler(target)",
     "seed": 42,
-    "input_features": [
-        "lag_1",
-        "lag_7",
-        "lag_14",
-        "rolling_mean_7",
-        "rolling_std_7",
-        "hour",
-        "day_of_week",
-        "is_weekend"
-    ],
-    "scaler": "StandardScaler"
+    "device": "cpu"
 }
