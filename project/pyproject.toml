@@ -10,6 +10,8 @@ dependencies = [
     "scikit-learn>=1.5.0",
     "joblib>=1.4.0",
     "pydantic>=2.8.0",
+    "aiogram>=3.28.2",
+    "python-dotenv>=1.2.2",
 ]
 
 [dependency-groups]

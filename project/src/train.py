@@ -10,10 +10,10 @@ from project.src.model import build_model
 from project.src.preprocessing import normalize_text
 
 
-DATASET_PATH = Path("data/messages.csv")
-MODEL_PATH = Path("artifacts/models/message_classifier.joblib")
-METRICS_PATH = Path("artifacts/metrics/classification_report.txt")
-CONFUSION_MATRIX_PATH = Path("artifacts/metrics/confusion_matrix.csv")
+DATASET_PATH = Path("project/data/messages.csv")
+MODEL_PATH = Path("project/artifacts/models/message_classifier.joblib")
+METRICS_PATH = Path("project/artifacts/metrics/classification_report.txt")
+CONFUSION_MATRIX_PATH = Path("project/artifacts/metrics/confusion_matrix.csv")
 
 
 def main() -> None:

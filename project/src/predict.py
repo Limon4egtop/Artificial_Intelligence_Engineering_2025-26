@@ -5,7 +5,7 @@ import joblib
 from project.src.preprocessing import normalize_text
 
 
-MODEL_PATH = Path("artifacts/models/message_classifier.joblib")
+MODEL_PATH = Path("project/artifacts/models/message_classifier.joblib")
 
 
 class MessageClassifier:
