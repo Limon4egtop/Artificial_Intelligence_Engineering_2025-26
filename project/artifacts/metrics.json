@@ -1,0 +1,12 @@
+{
+  "dataset_size": 765,
+  "train_size": 612,
+  "test_size": 153,
+  "spam_count": 740,
+  "not_spam_count": 25,
+  "accuracy": 0.9804,
+  "precision": 0.9801,
+  "recall": 1.0,
+  "f1": 0.99,
+  "classification_report": "              precision    recall  f1-score   support\n\n    not_spam       1.00      0.40      0.57         5\n        spam       0.98      1.00      0.99       148\n\n    accuracy                           0.98       153\n   macro avg       0.99      0.70      0.78       153\nweighted avg       0.98      0.98      0.98       153\n"
+}

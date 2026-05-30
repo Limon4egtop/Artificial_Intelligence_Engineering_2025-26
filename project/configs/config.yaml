@@ -1,0 +1,14 @@
+data:
+  spam_path: "data/spam_messages.csv"
+  ham_path: "data/ham_messages_sample.csv"
+
+model:
+  artifact_path: "artifacts/spam_classifier.joblib"
+  metrics_path: "artifacts/metrics.json"
+  test_size: 0.2
+  random_state: 42
+  spam_threshold: 0.65
+
+service:
+  host: "127.0.0.1"
+  port: 8000
