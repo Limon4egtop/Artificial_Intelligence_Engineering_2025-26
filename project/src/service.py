@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
-from src.predict import MessageClassifier
+from project.src.predict import MessageClassifier
 
 
 app = FastAPI(

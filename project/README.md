@@ -166,25 +166,27 @@ MODEL_PATH=project/artifacts/models/message_classifier.joblib
 Перейдите в папку проекта:
 ```
 cd project
+uv sync
+cd ..
 ```
 
 Запуск обучения:
 
 ```bash
-uv run python -m src.train
+uv run python -m project.src.train
 ```
 
 После обучения модель будет сохранена в:
 
 ```text
-artifacts/models/message_classifier.joblib
+project/artifacts/models/message_classifier.joblib
 ```
 
 Также будут сохранены:
 
 ```text
-artifacts/metrics/classification_report.txt
-artifacts/metrics/confusion_matrix.csv
+project/artifacts/metrics/classification_report.txt
+project/artifacts/metrics/confusion_matrix.csv
 ```
 
 ---
@@ -196,7 +198,7 @@ artifacts/metrics/confusion_matrix.csv
 Запуск:
 
 ```bash
-uv run uvicorn src.service:app --reload
+uv run uvicorn project.src.service:app --reload
 ```
 
 Сервис запускается на:
@@ -269,7 +271,7 @@ POST /predict
 Запуск:
 
 ```bash
-uv run python -m src.bot.telegram_bot
+uv run python -m project.src.bot.telegram_bot
 ```
 
 После запуска бот начинает автоматически модерировать сообщения в чатах, указанных в `.env`.
